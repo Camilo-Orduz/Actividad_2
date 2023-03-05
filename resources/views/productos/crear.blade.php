@@ -9,25 +9,23 @@
 </head>
 <body>
     <h1>Crear Producto</h1>
-    <h1>Hola miundo</h1>
     <br>
-    <form method="POST" action="" >
+    <form method="POST" action="{{ route('guardar_productos') }}" >
+        @csrf
         <div style="margin-left:42%">
-            <label for="nombre">Nombre del Producto: </label>
-            <input type="text" id="nombre" name="name">
+            <label for="">Nombre del Producto: </label>
+            <input type="text" id="nombre" name="nombre">
             <p>
-            <label for="descripcion">Descripción:</label>
+            <label for="">Descripción:</label>
             <br>
-            <textarea name="descrip" id="descripcion" cols="30" rows="10"></textarea><br>
-            <label for="precio">Precio:</label><br>
-            <input type="number" id="precio" name="precio">
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="amount">
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Imagen del Producto</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1"><br>
-                <button type="submit" Route="#">Crear producto</button>
-            </div>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea><br>
+            <label for="">Precio:</label>
+            <input type="number" id="precio" name="precio"><br>
+            <label for="">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad"><br>
+            <label for="">Imagen: </label>
+            <input type="text" id="imagen" name="imagen"><br>
+            <button type="submit" Route="#">Crear producto</button>
         </div>
         
     </form>

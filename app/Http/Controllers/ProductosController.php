@@ -18,5 +18,12 @@ class ProductosController extends Controller
 
         return view('productos.crear');
     }
+
+    public function store(Request $request){
+        Producto::create($request->all());
+        return redirect()->route('productos');
+    }
+
+
 }
 

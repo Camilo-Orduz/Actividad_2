@@ -12,7 +12,7 @@
     <title>Productos</title>
 </head>
 <body>
-    <a href="{{route('crear')}}"><button type="submit" class="btn btn-success">Agregar</button></a>
+    <a href="{{route('crear_productos')}}"><button type="submit" class="btn btn-success">Agregar</button></a>
     <div class="container">
         <table>
             <thead>
@@ -33,7 +33,7 @@
                     <td>{{ $producto -> descripcion}}</td>
                     <td>{{ $producto -> precio }}</td>
                     <td>{{ $producto -> cantidad }}</td>
-                    <td>{{ $producto -> imagen }}</td>
+                    <td><img src="{{ $producto -> imagen }}" alt="Camiseta de Messi"></td>
                 </tr>
                 @endforeach
             </tbody>

@@ -19,4 +19,6 @@ class Producto extends Model
         'imagen'
     ];
 
+    
+
 }
