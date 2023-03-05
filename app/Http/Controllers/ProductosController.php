@@ -33,5 +33,16 @@ class ProductosController extends Controller
         $producto = Producto::find($id);
         return view('productos.detalle', compact('producto'));
     }
+
+    public function edit ($id){
+        $producto = Producto::find($id);
+        return view('productos.editar', compact('producto'));
+    }
+
+    public function update (Request $request, $id){
+        $producto = Producto::find($id)->update($request->all());
+        return redirect()->route('productos');
+    }
 }
+
 
