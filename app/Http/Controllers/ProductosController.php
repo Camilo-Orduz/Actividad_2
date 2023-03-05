@@ -13,4 +13,10 @@ class ProductosController extends Controller
 
         return view('productos.index', compact('productos'));
     }
+
+    public function crear(){
+
+        return view('productos.crear');
+    }
 }
+
