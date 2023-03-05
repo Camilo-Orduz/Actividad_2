@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Crear Producto</h1>
+    <h1>Hola miundo</h1>
     <br>
     <form method="POST" action="" >
         <div style="margin-left:42%">
