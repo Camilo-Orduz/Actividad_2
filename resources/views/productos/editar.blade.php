@@ -10,7 +10,8 @@
 <body>
     <h1>Editar Producto</h1>
     <br>
-    <form method="POST" action="{{ route('actualizar_producto') }}" >
+    <form method="POST" action="{{ route('actualizar_producto', $producto->id) }}" >
+        @method('PUT')
         @csrf
         <div style="margin-left:42%">
             <label for="">Nombre del Producto: </label>
@@ -18,14 +19,14 @@
             <p>
             <label for="">Descripción:</label>
             <br>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea><br>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10">{{$producto->descripcion}}</textarea><br>
             <label for="">Precio:</label>
-            <input type="number" id="precio" name="precio"><br>
+            <input type="number" id="precio" name="precio" value="{{$producto->precio}}"><br>
             <label for="">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad"><br>
+            <input type="number" id="cantidad" name="cantidad" value="{{$producto->cantidad}}"><br>
             <label for="">Imagen: </label>
-            <input type="text" id="imagen" name="imagen"><br>
-            <button type="submit">Crear producto</button>
+            <input type="text" id="imagen" name="imagen" value="{{$producto->imagen}}"><br>
+            <button type="submit">Actualizar producto</button>
         </div>
         
     </form>

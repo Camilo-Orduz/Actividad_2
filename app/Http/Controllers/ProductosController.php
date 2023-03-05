@@ -40,7 +40,7 @@ class ProductosController extends Controller
     }
 
     public function update (Request $request, $id){
-        $producto = Producto::find($id)->update($request->all());
+        Producto::find($id)->update($request->all());
         return redirect()->route('productos');
     }
 }
