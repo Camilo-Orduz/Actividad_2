@@ -17,12 +17,14 @@
         <table>
             <thead>
                 <tr>
-                    <td>ID</td>
-                    <td>Nombre</td>
-                    <td>Descripción</td>
-                    <td>Precio</td>
-                    <td>Cantidad</td>
-                    <td>Imagen</td>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +36,11 @@
                     <td>{{ $producto -> precio }}</td>
                     <td>{{ $producto -> cantidad }}</td>
                     <td><img src="{{ $producto -> imagen }}" alt="Camiseta de Messi"></td>
+                    <td>
+                        <a href="#"><button type="button" class="btn btn-info">Detalles</button></a>
+                        <a href=""><button type="button" class="btn btn-warning">Editar</button></a>
+                        <a href=""><button type="button" class="btn btn-danger">Eliminar</button></a>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

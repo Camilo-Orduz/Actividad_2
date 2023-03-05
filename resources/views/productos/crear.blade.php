@@ -25,7 +25,7 @@
             <input type="number" id="cantidad" name="cantidad"><br>
             <label for="">Imagen: </label>
             <input type="text" id="imagen" name="imagen"><br>
-            <button type="submit" Route="#">Crear producto</button>
+            <button type="submit">Crear producto</button>
         </div>
         
     </form>
