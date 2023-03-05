@@ -14,7 +14,8 @@ use App\Http\Controllers\ProductosController;
 |
 */
 
-Route::get('/', [ProductosController::class, 'index'])->name('productos');
+Route::get('productos', [ProductosController::class, 'index'])->name('productos');
 Route::get('/crearProducto', [ProductosController::class, 'crear'])->name('crear_productos');
-Route::post('/', [ProductosController::class, 'store'])->name('guardar_productos');
+Route::post('productos', [ProductosController::class, 'store'])->name('guardar_productos');
+Route::delete('productos/{id}', [ProductosController::class, 'destroy'])->name('eliminar_productos');
 

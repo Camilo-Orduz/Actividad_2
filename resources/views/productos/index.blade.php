@@ -35,11 +35,15 @@
                     <td>{{ $producto -> descripcion}}</td>
                     <td>{{ $producto -> precio }}</td>
                     <td>{{ $producto -> cantidad }}</td>
-                    <td><img src="{{ $producto -> imagen }}" alt="Camiseta de Messi"></td>
+                    <td><img src="{{ $producto -> imagen }}" alt="Camiseta de Messi" style="max-width:400px; max-height:300px"></td>
                     <td>
-                        <a href="#"><button type="button" class="btn btn-info">Detalles</button></a>
-                        <a href=""><button type="button" class="btn btn-warning">Editar</button></a>
-                        <a href=""><button type="button" class="btn btn-danger">Eliminar</button></a>
+                        <form action="{{ route('eliminar_productos', $producto->id)}}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <a href="#"><button type="button" class="btn btn-info">Detalles</button></a>
+                            <a href=""><button type="button" class="btn btn-warning">Editar</button></a>
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach

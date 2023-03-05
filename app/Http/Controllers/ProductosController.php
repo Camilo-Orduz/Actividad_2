@@ -24,6 +24,9 @@ class ProductosController extends Controller
         return redirect()->route('productos');
     }
 
-
+    public function destroy($id){
+        Producto::find($id)->delete();
+        return redirect()->route('productos');
+    }
 }
 
