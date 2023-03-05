@@ -40,7 +40,7 @@
                         <form action="{{ route('eliminar_productos', $producto->id)}}" method="POST">
                             @method('DELETE')
                             @csrf
-                            <a href="#"><button type="button" class="btn btn-info">Detalles</button></a>
+                            <a href="{{route('detalle_producto', $producto->id)}}"><button type="button" class="btn btn-info">Detalles</button></a>
                             <a href=""><button type="button" class="btn btn-warning">Editar</button></a>
                             <button type="submit" class="btn btn-danger">Eliminar</button>
                         </form>

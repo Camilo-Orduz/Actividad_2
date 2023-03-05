@@ -28,5 +28,10 @@ class ProductosController extends Controller
         Producto::find($id)->delete();
         return redirect()->route('productos');
     }
+
+    public function show ($id){
+        $producto = Producto::find($id);
+        return view('productos.detalle', compact('producto'));
+    }
 }
 
